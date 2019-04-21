@@ -16,5 +16,8 @@ class FasilitasController extends Controller
     }
 
     
-    
+    public function create()
+    {
+        return view('fasilitas.create');
+    }
 }

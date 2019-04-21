@@ -38,3 +38,16 @@ route::get('/tambahpost',function(){
         return view('dashboard.pengunjung.pengunjung');
     });  
         //end dahboard
+        //fasilitas
+        route::get('/fasilitas/index',[
+            'uses'  => 'FasilitasController@index',
+            'as'    =>  'fasilitas.index' 
+        ]);
+        route::get('/fasilitas/create',[
+            'uses'  => 'FasilitasController@create',
+            'as'    =>  'fasilitas.create' 
+        ]);
+        route::get('/fasilitas/store',[
+            'uses'  => 'FasilitasController@store',
+            'as'    =>  'fasilitas.store' 
+        ]);

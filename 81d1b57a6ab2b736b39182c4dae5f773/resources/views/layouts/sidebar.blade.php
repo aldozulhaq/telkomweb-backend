@@ -35,7 +35,7 @@
                       </li>
                       <li><a href="tables-filters.html">Sambutan Kepsek</a>
                       </li>
-                      <li><a href="tables-filters.html">Fasilitas</a>
+                      <li><a href="{{ asset('/fasilitas/index')}}">Fasilitas</a>
                       </li>
                     </ul>
                   </li>
@@ -103,12 +103,6 @@
                   
                 </ul>
               </div>
-            </div>
-          </div>
-          <div class="progress-widget">
-            <div class="progress-data"><span class="progress-value">60%</span><span class="name">Current Project</span></div>
-            <div class="progress">
-              <div style="width: 60%;" class="progress-bar progress-bar-primary"></div>
             </div>
           </div>
         </div>

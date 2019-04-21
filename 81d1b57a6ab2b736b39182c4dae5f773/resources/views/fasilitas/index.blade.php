@@ -4,17 +4,8 @@
 
 <div class="col-sm-12">
     <div class="panel panel-default panel-table">
-      <div class="panel-heading">Hover &amp; Image
-        {{-- <div class="tools dropdown"><span class="icon mdi mdi-download"></span><a href="#" type="button" data-toggle="dropdown" class="dropdown-toggle"><span class="icon mdi mdi-more-vert"></span></a>
-          <ul role="menu" class="dropdown-menu pull-right">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </div> --}}
-        <div class="pull-right"><button class="btn btn-rounded btn-space btn-primary">+ Fasilitas</button></div>
+      <div class="panel-heading">Daftar Fasilitas
+        <div class="pull-right"><a href="{{ url('/fasilitas/create')}}"><button class="btn btn-rounded btn-space btn-primary">+ Fasilitas</button></a></div>
       </div>
       <div class="panel-body">
         <table class="table table-striped table-hover">
