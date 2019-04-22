@@ -5,27 +5,38 @@
 <div class="col-sm-12">
     <div class="panel panel-default panel-table">
       <div class="panel-heading">Daftar Fasilitas
-        <div class="pull-right"><a href="{{ url('/fasilitas/create')}}"><button class="btn btn-rounded btn-space btn-primary">+ Fasilitas</button></a></div>
+        <div class="pull-right"><a class="btn btn-success" href="{{URL::to('/fasilitas/create')}}"><p class="glyphicon glyphicon-pencil"> Pembimbing</p></a></div>
       </div>
       <div class="panel-body">
         <table class="table table-striped table-hover">
           <thead>
             <tr>
               <th style="width:37%;">User</th>
-              <th style="width:36%;">Commit</th>
-              <th>Date</th>
+              <th style="width:37%;">Fasilitas</th>
+              <th style="width:36%;">Role</th>
+              {{-- <th>Date</th> --}}
               <th>Action</th>
             </tr>
           </thead>
           @foreach ($fasilitas as $row)
           <tbody>
             <tr>
-              <td class="user-avatar"> <img src="{{ asset('assets/img/avatar6.png')}}" alt="Avatar">Penelope Thornton</td>
+              <td class="user-avatar"> <img src="{{ asset('assets/img/avatar6.png')}}" alt="Avatar">{{$row->user}}</td>
               <td>{{$row->post_fasilitas}}</td>
-              <td>{{$row->date_fasilitas}}</td>
-              <td><button class="btn btn-rounded btn-primary"><i class="icon icon-left mdi mdi-edit"></i></button> 
-              <button class="btn btn-rounded btn-danger"><i class="icon icon-left mdi mdi-delete"></i></button></td>
-            </tr>    
-          @endforeach
+              <td>{{$row->role}}</td>
+              {{-- <td>{{$row->created_at->toFormattedDateString()}}</td> --}}
+              <td><form action="{{ route('fasilitas.destroy', $row->id) }}" method="post">
+                {{ csrf_field() }}
+                <input name="_method" type="hidden" value="DELETE">
+                <button class="btn btn-danger" type="submit"><i class="fa fa-trash"></i>Delete</button>
+                <a href="{{route('fasilitas.edit', $row->id)}}" class="btn btn-warning"><i class="fa fa-edit">Edit</i></a>
+              </form>
+          </td>
+            </tr>  
+          </tbody>
+            </div>  
+          @endforeach 
           
 @endsection
+
+

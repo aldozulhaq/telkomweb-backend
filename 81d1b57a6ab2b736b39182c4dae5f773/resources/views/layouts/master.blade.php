@@ -49,9 +49,11 @@
     <script src="{{ asset('assets/lib/jqvmap/jquery.vmap.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('assets/lib/jqvmap/maps/jquery.vmap.world.js')}}" type="text/javascript"></script>
     <script src="{{ asset('assets/js/app-dashboard.js')}}" type="text/javascript"></script>
+    <script src="{{ asset('assets/lib/daterangepicker/js/daterangepicker.js')}}" type="text/javascript"></script>
     <script src="{{ asset("assets/lib/jquery.magnific-popup/jquery.magnific-popup.min.js")}}" type="text/javascript"></script>
     <script src="{{ asset('assets/lib/masonry/masonry.pkgd.min.js')}}" type="text/javascript"></script>
     <script src="{{ asset('assets/js/app-page-gallery.js')}}" type="text/javascript"></script>
+    <script src="{{ asset('assets/lib/jquery.niftymodals/dist/jquery.niftymodals.js')}}" type="text/javascript"></script>
     <script type="text/javascript">
       $(document).ready(function(){
       	//initialize the javascript
@@ -60,5 +62,13 @@
       
       });
     </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+      	//initialize the javascript
+      	App.init();
+      	App.formElements();
+      });
+    </script>
+    
 </body>
 </html>

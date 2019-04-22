@@ -8,6 +8,6 @@ class Fasilitas extends Model
 {
     protected $table = 'fasilitas';
 
-    protected $fillable = ['id_fas_post','post_fasilitas','date_fasilitas','flag_fasilitas'];
+    protected $fillable = ['id','post_fasilitas','date_fasilitas','flag_fasilitas','user','role'];
 
 }

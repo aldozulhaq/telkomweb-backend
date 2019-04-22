@@ -35,7 +35,7 @@
                       </li>
                       <li><a href="tables-filters.html">Sambutan Kepsek</a>
                       </li>
-                      <li><a href="{{ asset('/fasilitas/index')}}">Fasilitas</a>
+                      <li><a href="{{ url('fasilitas')}}">Fasilitas</a>
                       </li>
                     </ul>
                   </li>

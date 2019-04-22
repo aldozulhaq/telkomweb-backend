@@ -22,12 +22,13 @@
       <div class="panel panel-default panel-border-color panel-border-color-primary">
         <div class="panel-heading panel-heading-divider">Basic Elements<span class="panel-subtitle">These are the basic bootstrap form elements</span></div>
         <div class="panel-body">
-          <form action="#" style="border-radius: 0px;" class="form-horizontal group-border-dashed">
+          <form style="border-radius: 0px;" class="form-horizontal group-border-dashed" action="{{route('fasilitas.store')}}" method="POST">
             {{ csrf_field() }}
+            
             <div class="form-group">
               <label class="col-sm-2 control-label">Penulis</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" id="penulis" name="penulis">
+                <input type="text" class="form-control" id="penulis" name="user">
               </div>
             </div>
             <div class="form-group">
@@ -37,15 +38,15 @@
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Date</label>
+              <label class="col-sm-2 control-label">fasilitas</label>
               <div class="col-sm-9">
-                <input type="text" class="form-control" id="date" name="date">
+                <textarea class="form-control" name="post_fasilitas" id="fasilitas"></textarea>
               </div>
             </div>
             <div class="form-group">
-              <label class="col-sm-2 control-label">Textarea</label>
-              <div class="col-sm-9">
-                <textarea class="form-control"></textarea>
+              <div class="col-md-9 col-md-offset-3">
+              <a class="btn btn-primary" href="{{url('/fasilitas')}}">Cancel</a>
+                <button type="submit" value="save" class="btn btn-success">save</button>
               </div>
             </div>
           </form>
