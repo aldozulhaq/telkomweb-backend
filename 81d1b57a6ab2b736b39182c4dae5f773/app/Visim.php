@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Visim extends Model
 {
-    protected $table = 'sejarah';
+    protected $table = 'visim';
 
-    protected $fillable = ['id_vis_post','post_visim','date_visim','flag_visim'];
+    protected $fillable = ['id','post_visim','date_visim','flag_visim', 'user', 'role'];
 
 }

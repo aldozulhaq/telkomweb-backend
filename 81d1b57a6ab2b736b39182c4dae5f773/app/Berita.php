@@ -8,6 +8,6 @@ class Berita extends Model
 {
     protected $table = 'berita';
 
-    protected $fillable = ['id_artikel','judul_artikel','post_artikel','id_gam_post','date_artikel','flag_artikel'];
+    protected $fillable = ['id','judul_artikel','post_artikel','id_gam_post','date_artikel','flag_artikel','user','role'];
 
 }

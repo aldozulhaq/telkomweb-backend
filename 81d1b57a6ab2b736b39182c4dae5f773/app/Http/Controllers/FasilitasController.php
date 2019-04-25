@@ -25,17 +25,17 @@ class FasilitasController extends Controller
     {
         $this->validate($request,[
             
-            'user'         =>'required',
-            'role'      =>'required',
-            'post_fasilitas'          => 'required|',
+            'user'              =>'required',
+            'role'              =>'required',
+            'post_fasilitas'    => 'required|',
            
         ]);
 
         $fasilitas = Fasilitas::create([
     
-            'user'         =>$request->user,
-            'role'      =>$request->role,
-            'post_fasilitas'          =>$request->post_fasilitas,
+            'user'              =>$request->user,
+            'role'              =>$request->role,
+            'post_fasilitas'    =>$request->post_fasilitas,
             
         ]);
        
