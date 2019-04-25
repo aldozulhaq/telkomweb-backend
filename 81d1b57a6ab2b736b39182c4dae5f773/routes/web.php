@@ -10,10 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::group(['prefix' => 'admin','middleware'=>'auth'],function(){
 
-Route::get('/', function () {
-    return view('welcome');
-});
     //partials
 Route::get('/master', function () {
     return view('layouts.master');
@@ -23,6 +21,7 @@ route::get('/blank',function(){
 });
     //end partials
     // dashboard
+    
 route::get('/dashboard',function(){
     return view('dashboard.dashboard');
 });
@@ -40,3 +39,14 @@ route::get('/tambahpost',function(){
         //end dahboard
         //fasilitas
         route::resource('/fasilitas','FasilitasController');
+        //kritik&saran
+        route::resource('/kritik','KritikController');
+});
+Auth::routes();
+Route::get('/', function () {
+    return view('auth.login');
+});
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+

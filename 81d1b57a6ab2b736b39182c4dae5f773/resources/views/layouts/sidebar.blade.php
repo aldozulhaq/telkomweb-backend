@@ -5,7 +5,7 @@
               <div class="left-sidebar-content">
                 <ul class="sidebar-elements">
                   <li class="divider">Menu</li>
-                <li class="active"><a href="{{ url('dashboard')}}"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
+                <li class="active"><a href="{{ url('/admin/dashboard')}}"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
                   </li>
                   <li class="parent"><a href="#"><i class="icon mdi mdi-refresh"></i><span>Beranda</span></a>
                     <ul class="sub-menu">
@@ -35,7 +35,7 @@
                       </li>
                       <li><a href="tables-filters.html">Sambutan Kepsek</a>
                       </li>
-                      <li><a href="{{ url('fasilitas')}}">Fasilitas</a>
+                      <li><a href="{{ url('/admin/fasilitas')}}">Fasilitas</a>
                       </li>
                     </ul>
                   </li>
@@ -60,7 +60,31 @@
                       <li><a href="pages-login.html">MM</a>
                       </li>
                     </ul>
+                    <li class="parent"><a href="#"><i class="icon mdi mdi-flag"></i><span>Kesiswaan</span></a>
+                      <ul class="sub-menu">
+                        <li><a href="email-inbox.html">Osis</a>
+                        </li>
+                        <li><a href="email-read.html">Ekstra Kulikuler</a>
+                        </li>
+                        <li><a href="email-compose.html">Prestasi</a>
+                        </li>
+                        <li><a href="email-compose.html">Event</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="parent"><a href="#"><i class="icon mdi mdi-assignment-account"></i><span>Hubungan</span></a>
+                      <ul class="sub-menu">
+                        <li><a href="layouts-primary-header.html">Alumni</a>
+                        </li>
+                        <li><a href="layouts-success-header.html">Unit Produksi</a>
+                        </li>
+                        <li><a href="layouts-warning-header.html">Kerjasama Industri</a>
+                        </li>
+                      </ul>
+                    </li>
                   </li>
+                  <li><a href="{{ url('/admin/kritiksaran')}}"><i class="icon mdi mdi-comment-text"></i><span>Kritik&amp;Saran</span></a>
+                  @if (auth::user()->group_id==1)
                   <li class="divider">User</li>
                   <li class="parent"><a href="charts.html"><i class="icon mdi mdi-account-o"></i><span>User</span></a>
                     <ul class="sub-menu">
@@ -78,28 +102,7 @@
                       </li>
                     </ul>
                   </li>
-                  <li class="parent"><a href="#"><i class="icon mdi mdi-flag"></i><span>Kesiswaan</span></a>
-                    <ul class="sub-menu">
-                      <li><a href="email-inbox.html">Osis</a>
-                      </li>
-                      <li><a href="email-read.html">Ekstra Kulikuler</a>
-                      </li>
-                      <li><a href="email-compose.html">Prestasi</a>
-                      </li>
-                      <li><a href="email-compose.html">Event</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="parent"><a href="#"><i class="icon mdi mdi-assignment-account"></i><span>Hubungan</span></a>
-                    <ul class="sub-menu">
-                      <li><a href="layouts-primary-header.html">Alumni</a>
-                      </li>
-                      <li><a href="layouts-success-header.html">Unit Produksi</a>
-                      </li>
-                      <li><a href="layouts-warning-header.html">Kerjasama Industri</a>
-                      </li>
-                    </ul>
-                  </li>
+                  @endif
                   
                 </ul>
               </div>
