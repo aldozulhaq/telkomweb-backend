@@ -8,6 +8,6 @@ class Kepsek extends Model
 {
     protected $table = 'kepsek';
 
-    protected $fillable = ['id_kep_post','post_kepsek','date_kepsek','flag_kepsek'];
+    protected $fillable = ['id','post_kepsek','date_kepsek','flag_kepsek','user','role'];
 
 }

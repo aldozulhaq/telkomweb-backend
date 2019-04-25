@@ -8,6 +8,6 @@ class Sejarah extends Model
 {
     protected $table = 'sejarah';
 
-    protected $fillable = ['id_sej_post','post_sejarah','date_sejarah','flag_sejarah'];
+    protected $fillable = ['id','post_sejarah','date_sejarah','flag_sejarah','user','role'];
 
 }

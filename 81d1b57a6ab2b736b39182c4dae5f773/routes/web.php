@@ -38,5 +38,17 @@ route::get('/tambahpost',function(){
         return view('dashboard.pengunjung.pengunjung');
     });  
         //end dahboard
-        //fasilitas
-        route::resource('/fasilitas','FasilitasController');
+    //fasilitas
+route::resource('/fasilitas','FasilitasController');
+
+route::resource('/berita','BeritaController');
+
+route::resource('/sejarah','SejarahController');
+
+route::resource('/visim','VisimController');
+
+route::resource('/kepsek','KepsekController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
