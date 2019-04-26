@@ -41,7 +41,7 @@ class SejarahController extends Controller
        
        
         $sejarah ->save();
-        return redirect('/sejarah');
+        return redirect('/admin/sejarah');
     }
 
     
@@ -66,7 +66,7 @@ class SejarahController extends Controller
         $sejarah->post_sejarah = $request->post_sejarah;
         
         $sejarah->save();
-        return redirect('/sejarah');
+        return redirect('/admin/sejarah');
     }
 
     
@@ -76,6 +76,6 @@ class SejarahController extends Controller
 
         $sejarah->delete();
         
-        return redirect('/sejarah');
+        return redirect('/admin/sejarah');
     }
 }

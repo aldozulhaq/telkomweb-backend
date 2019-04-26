@@ -41,7 +41,7 @@ class KepsekController extends Controller
        
        
         $kepsek ->save();
-        return redirect('/kepsek');
+        return redirect('/admin/kepsek');
     }
 
     
@@ -66,7 +66,7 @@ class KepsekController extends Controller
         $kepsek->post_kepsek = $request->post_kepsek;
         
         $kepsek->save();
-        return redirect('/kepsek');
+        return redirect('/admin/kepsek');
     }
 
     
@@ -76,6 +76,6 @@ class KepsekController extends Controller
 
         $kepsek->delete();
         
-        return redirect('/kepsek');
+        return redirect('/admin/kepsek');
     }
 }
