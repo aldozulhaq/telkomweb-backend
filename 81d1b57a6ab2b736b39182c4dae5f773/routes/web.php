@@ -21,27 +21,38 @@ route::get('/blank',function(){
 });
     //end partials
     // dashboard
-    
-route::get('/dashboard',function(){
-    return view('dashboard.dashboard');
-});
-    //post  
-route::get('/totalpost',function(){
-     return view('dashboard.post.totalpost');
-}); 
-route::get('/tambahpost',function(){
-    return view('dashboard.post.tambah');
-});  
-    //pengunjung
+    route::get('/dashboard',function(){
+        return view('dashboard.dashboard');
+    });
+        //post  
+    route::get('/totalpost',function(){
+        return view('dashboard.post.totalpost');
+    }); 
+    route::get('/tambahpost',function(){
+        return view('dashboard.post.tambah');
+    });  
+        //pengunjung
     route::get('/pengunjung',function(){
         return view('dashboard.pengunjung.pengunjung');
     });  
-        //end dahboard
+    //end dahboard
+                //profil
         //fasilitas
         route::resource('/fasilitas','FasilitasController');
         //kritik&saran
         route::resource('/kritik','KritikController');
-});
+        //berita
+        route::resource('/berita','BeritaController');
+        //kepsek
+        route::resource('/kepsek','KepsekController');
+        //sejarah
+        route::resource('/sejarah','SejarahController');
+        //visim
+        route::resource('/visim','VisimController');
+                //endprofil
+
+
+    });
 Auth::routes();
 Route::get('/', function () {
     return view('auth.login');

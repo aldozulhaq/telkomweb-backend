@@ -29,11 +29,11 @@
                   </li>
                   <li class="parent"><a href="#"><i class="icon mdi mdi-graduation-cap"></i><span>Profil</span></a>
                     <ul class="sub-menu">
-                      <li><a href="{{ url('sejarah')}}">Sejarah</a>
+                      <li><a href="{{ url('/admin/sejarah')}}">Sejarah</a>
                       </li>
-                      <li><a href="{{ url('visim')}}">Visi & Misi</a>
+                      <li><a href="{{ url('/admin/visim')}}">Visi & Misi</a>
                       </li>
-                      <li><a href="{{ url('kepsek')}}">Sambutan Kepsek</a>
+                      <li><a href="{{ url('/admin/kepsek')}}">Sambutan Kepsek</a>
                       </li>
                       <li><a href="{{ url('/admin/fasilitas')}}">Fasilitas</a>
                       </li>

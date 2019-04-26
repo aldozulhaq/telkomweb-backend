@@ -21,7 +21,7 @@ class UserTableSeeder extends Seeder
             'name' => 'Admind',
             'email' => 'admin@gmail.com',
             'password' =>bcrypt('admin'),
-            'group_id' => 2,
+            'group_id' => 2, 
         ]);
     }
 }
