@@ -50,14 +50,19 @@ route::get('/blank',function(){
         //visim
         route::resource('/visim','VisimController');
                 //endprofil
-
-
+                        //user
+                        Route::get('user', ['as'=>'user','uses'=>'UserController@user']);
+            Route::get('/create','UserController@getcreate')->name('create');
+            Route::post('/create','UserController@postcreate');   
+                        //enduser
     });
 Auth::routes();
 Route::get('/', function () {
     return view('auth.login');
 });
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home',function(){
+    return  view('home');
+})->name('home')->middleware('auth');
 
 
 

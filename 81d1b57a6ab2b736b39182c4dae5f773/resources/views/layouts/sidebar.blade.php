@@ -88,6 +88,8 @@
                   <li class="divider">User</li>
                   <li class="parent"><a href="charts.html"><i class="icon mdi mdi-account-o"></i><span>User</span></a>
                     <ul class="sub-menu">
+                    <li><a href="{{ url('/admin/user')}}">Data User</a>
+                        </li>
                       <li><a href="charts-flot.html">User aktif</a>
                       </li>
                       <li><a href="charts-sparkline.html">Total pengunjung</a>
