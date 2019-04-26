@@ -23,5 +23,11 @@ class UserTableSeeder extends Seeder
             'password' =>bcrypt('admin'),
             'group_id' => 2, 
         ]);
+        \App\User::create([
+            'name' => 'Admind',
+            'email' => 'aldo@gmail.com',
+            'password' =>bcrypt('admin'),
+            'group_id' => 3,        
+        ]);
     }
 }
