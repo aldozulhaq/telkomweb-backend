@@ -41,7 +41,7 @@ class FasilitasController extends Controller
        
        
         $fasilitas ->save();
-        return redirect('/fasilitas');
+        return redirect('/admin/fasilitas');
     }
 
     
@@ -66,7 +66,7 @@ class FasilitasController extends Controller
         $fasilitas->post_fasilitas = $request->post_fasilitas;
         
         $fasilitas->save();
-        return redirect('/fasilitas');
+        return redirect('/admin/fasilitas');
     }
 
     
@@ -76,6 +76,6 @@ class FasilitasController extends Controller
 
         $fasilitas->delete();
         
-        return redirect('/fasilitas');
+        return redirect('/admin/fasilitas');
     }
 }

@@ -41,7 +41,7 @@ class BeritaController extends Controller
        
        
         $berita ->save();
-        return redirect('/berita');
+        return redirect('/admin/berita');
     }
 
     
@@ -66,7 +66,7 @@ class BeritaController extends Controller
         $berita->post_berita = $request->post_berita;
         
         $berita->save();
-        return redirect('/berita');
+        return redirect('/admin/berita');
     }
 
     
@@ -76,6 +76,6 @@ class BeritaController extends Controller
 
         $berita->delete();
         
-        return redirect('/berita');
+        return redirect('/admin/berita');
     }
 }

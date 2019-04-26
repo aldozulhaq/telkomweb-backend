@@ -41,7 +41,7 @@ class VisimController extends Controller
        
        
         $visim ->save();
-        return redirect('/visim');
+        return redirect('/admin/visim');
     }
 
     
@@ -66,7 +66,7 @@ class VisimController extends Controller
         $visim->post_visim = $request->post_visim;
         
         $visim->save();
-        return redirect('/visim');
+        return redirect('/admin/visim');
     }
 
     
@@ -76,6 +76,6 @@ class VisimController extends Controller
 
         $visim->delete();
         
-        return redirect('/visim');
+        return redirect('/admin/visim');
     }
 }
