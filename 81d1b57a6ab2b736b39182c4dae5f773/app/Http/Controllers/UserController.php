@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Image;
 use app\User;
+use app\Group;
 use Validator;
 use DB;
 
@@ -17,8 +18,9 @@ class UserController extends Controller
     }
     public function user()
     {
-        $user = auth::User()::all();
-        return view('user.datauser', array(auth::user()));
+        $user = auth::User();
+        $user = User::with('group')->get();
+        return view('user.datauser',compact('user'));
     }
     public function getcreate()
     {
@@ -39,9 +41,22 @@ class UserController extends Controller
             'password'=>bcrypt($request->password),
             'group_id'=>'3'
         ]);
-        
-        
-
         return redirect()->route('home');
+    }
+    public function admin($id){
+        $user = auth::User();
+        $user = User::find($id);
+
+        $user->group_id = 2;
+        $user->save();
+        return redirect()->back();
+    }
+    public function penulis($id){
+        $user = auth::User();
+        $user = User::find($id);
+
+        $user->group_id = 3;
+        $user->save();
+        return redirect()->back();
     }
 }

@@ -16,18 +16,21 @@ class UserTableSeeder extends Seeder
             'email' => 'fahrias600@gmail.com',
             'password' =>bcrypt('irgi551'),
             'group_id' => 1,
+            'gambar' =>'img/user.png'
         ]);
         \App\User::create([
             'name' => 'Admind',
             'email' => 'admin@gmail.com',
             'password' =>bcrypt('admin'),
-            'group_id' => 2, 
+            'group_id' => 2,
+            'gambar' =>'img/avatar.jpg' 
         ]);
         \App\User::create([
             'name' => 'Admind',
             'email' => 'aldo@gmail.com',
             'password' =>bcrypt('admin'),
-            'group_id' => 3,        
+            'group_id' => 3,
+            'gambar' =>'img/logos.png'        
         ]);
     }
 }

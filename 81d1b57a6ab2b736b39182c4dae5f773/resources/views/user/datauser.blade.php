@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','tulis judul') 
+@section('title','Data User') 
 @section('content')
 
 <div class="col-sm-12">
@@ -20,37 +20,34 @@
           <thead>
             <tr>
               <th style="width:37%;">User</th>
-              <th style="width:36%;">Commit</th>
-              <th style="width:36%;">Role</th>
-              <th class="actions"></th>
+              <th style="width:26%;">Role</th>
+              <th style="width:26%;">Email</th>
+              <th style="width:36%;">Action</th>
             </tr>
           </thead>
+          @foreach ($user as $usr)
           <tbody>
             <tr>
-              <td class="user-avatar"> <img src="assets/img/avatar6.png" alt="Avatar">Penelope Thornton</td>
-              <td>Initial commit</td>
-              <td>Aug 6, 2015</td>
-              <td class="actions"><a href="#" class="icon"><i class="mdi mdi-delete"></i></a></td>
-            </tr>
-            <tr>
-              <td class="user-avatar"> <img src="assets/img/avatar4.png" alt="Avatar">Benji Harper</td>
-              <td>Main structure markup</td>
-              <td>Jul 28, 2015</td>
-              <td class="actions"><a href="#" class="icon"><i class="mdi mdi-delete"></i></a></td>
-            </tr>
-            <tr>
-              <td class="user-avatar"> <img src="assets/img/avatar5.png" alt="Avatar">Justine Myranda</td>
-              <td>Left sidebar adjusments</td>
-              <td>Jul 15, 2015</td>
-              <td class="actions"><a href="#" class="icon"><i class="mdi mdi-delete"></i></a></td>
-            </tr>
-            <tr>
-              <td class="user-avatar"> <img src="assets/img/avatar3.png" alt="Avatar">Sherwood Clifford</td>
-              <td>Topbar dropdown style</td>
-              <td>Jun 30, 2015</td>
-              <td class="actions"><a href="#" class="icon"><i class="mdi mdi-delete"></i></a></td>
+            
+              @if ($usr->group_id==1)
+              <td class="user-avatar"><img src="{{asset('/img/superadmin.png')}}"> {{$usr->name}}</td>
+            @elseif ($usr->group_id==2)
+            <td class="user-avatar"><img src="{{asset('/img/admin.png')}}"> {{$usr->name}}</td>
+              @else
+            <td class="user-avatar"><img src="{{asset('/img/penulis.png')}}"> {{$usr->name}}</td>  
+            @endif
+            <td>{{$usr->group->group_code}}</td>
+            <td>{{$usr->email}}</td>
+              @if ($usr->group_id==3)
+              <td><a href="{{ route('user.admin',['id'=> $usr->id])}}"><button class="btn btn-rounded btn-space btn-primary"><i class="icon icon-left mdi mdi-wrench"></i>Make admin</button></a></td>    
+              @elseif($usr->group_id==2)
+              <td><a href="{{ route('user.penulis',['id'=> $usr->id])}}"><button class="btn btn-rounded btn-space btn-danger"><i class="icon icon-left mdi mdi-wrench"></i>Make Penulis</button></a></td>
+              @else
+              <td><img src="{{ asset('/img/kunci2.png')}}"></td>
+              @endif
             </tr>
           </tbody>
+          @endforeach
         </table>
       </div>
     </div>
