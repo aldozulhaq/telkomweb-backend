@@ -49,6 +49,12 @@ route::get('/blank',function(){
         route::resource('/sejarah','SejarahController');
         //visim
         route::resource('/visim','VisimController');
+        //rpl
+        route::resource('/rpl','RplController');
+                //tkj
+        route::resource('/mm','MmController');
+                //tkj
+        route::resource('/tkj','TkjController');
                 //endprofil
 
 
