@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Group extends Model
 {
-    protected $table = 'groups';
+    protected $table = 'group';
 
     protected $fillable = ['id','group_code','group_description'];
 
