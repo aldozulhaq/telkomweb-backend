@@ -5,7 +5,7 @@
 <div class="col-sm-12">
     <div class="panel panel-default panel-table">
       <div class="panel-heading">Daftar Post
-        <div class="pull-right"><a class="btn btn-success" href="{{URL::to('/kepsek/create')}}"><p class="glyphicon">+ <b>Tambah</b></p></a></div>
+        <div class="pull-right"><a class="btn btn-success" href="{{URL::to('/admin/kepsek/create')}}"><p class="glyphicon">+ <b>Tambah</b></p></a></div>
       </div>
       <div class="panel-body">
         <table class="table table-striped table-hover">

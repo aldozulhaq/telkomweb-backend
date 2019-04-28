@@ -27,16 +27,17 @@ class BeritaController extends Controller
             
             'user'              =>'required',
             'role'              =>'required',
-            'post_artikel'      =>'required|',
-           
+            'judul_artikel'     =>'required',        
+            'post_artikel'      =>'required'
         ]);
 
         $berita = Berita::create([
     
             'user'              =>$request->user,
             'role'              =>$request->role,
+            'judul_artikel'     =>$request->judul_artikel,
             'post_artikel'      =>$request->post_artikel,
-            
+            'id_gam_post'       =>$request->id_gam_post
         ]);
        
        

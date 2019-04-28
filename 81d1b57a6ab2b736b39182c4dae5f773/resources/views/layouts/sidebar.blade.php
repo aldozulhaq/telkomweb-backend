@@ -41,11 +41,7 @@
                   </li>
                   <li class="parent"><a href="#"><i class="icon mdi mdi-edit"></i><span>Berita</span></a>
                     <ul class="sub-menu">
-                        <li><a href="ui-typography.html">Daftar Artikel</a>
-                        </li>
-                      <li><a href="ui-typography.html">Isi Artikel</a>
-                      </li>
-                      <li><a href="ui-typography.html">Album</a>
+                      <li><a href="{{ url('/admin/berita')}}">Artikel</a>
                       </li>
                     </ul>
                   </li>
@@ -53,11 +49,11 @@
                   <li ><a href="#"><i class="icon mdi mdi-wallpaper"></i><span>Galeri</span></a></li>
                   <li class="parent"><a href="#"><i class="icon mdi mdi-layers"></i><span>Jurusan</span></a>
                     <ul class="sub-menu">
-                      <li><a href="pages-blank.html">RPL</a>
+                      <li><a href="{{ url('/admin/rpl')}}">RPL</a>
                       </li>
-                      <li><a href="pages-blank-header.html">TKJ</a>
+                      <li><a href="{{ url('/admin/mm')}}">MM</a>
                       </li>
-                      <li><a href="pages-login.html">MM</a>
+                      <li><a href="{{ url('/admin/tkj')}}">TKJ</a>
                       </li>
                     </ul>
                     <li class="parent"><a href="#"><i class="icon mdi mdi-flag"></i><span>Kesiswaan</span></a>
