@@ -53,7 +53,7 @@ route::get('/blank',function(){
                         //user
                         Route::get('user', ['as'=>'user','uses'=>'UserController@user']);
             Route::get('/create','UserController@getcreate')->name('create');
-            Route::post('/create','UserController@postcreate');
+            Route::post('/create','UserController@postcreate')->name('postcreate');
             route::get('/user/admin/{id}',[
                 'uses'  => 'UserController@admin',
                 'as'    =>  'user.admin'

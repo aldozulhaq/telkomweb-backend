@@ -1,10 +1,10 @@
 @extends('layouts.master')
-@section('title','Data User') 
+@section('title','Admin Page') 
 @section('content')
 
 <div class="col-sm-12">
     <div class="panel panel-default panel-table">
-      <div class="panel-heading">Hover &amp; Image
+      <div class="panel-heading">Data User
         <div class="tools dropdown"><span class="icon mdi mdi-download"></span><a href="#" type="button" data-toggle="dropdown" class="dropdown-toggle"><span class="icon mdi mdi-more-vert"></span></a>
           <ul role="menu" class="dropdown-menu pull-right">
             <li><a href="#">Action</a></li>
