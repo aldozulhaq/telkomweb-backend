@@ -84,22 +84,17 @@
                   <li class="divider">User</li>
                   <li class="parent"><a href="charts.html"><i class="icon mdi mdi-account-o"></i><span>User</span></a>
                     <ul class="sub-menu">
-                    <li><a href="{{ url('/admin/user')}}">Data User</a>
-                        </li>
-                      <li><a href="charts-flot.html">User aktif</a>
-                      </li>
-                      <li><a href="charts-sparkline.html">Total pengunjung</a>
-                      </li>
+                          <li><a href="{{ url('/admin/user')}}">Data User</a>
+                    </li>
+                          <li><a href="{{ url('/admin/create')}}">Buat User</a>
+                    </li>    
+                    </li>
+                          <li><a href="charts-flot.html">User aktif</a>
+                    </li>
+                          <li><a href="charts-sparkline.html">Total pengunjung</a>
+                    </li>
                     </ul>
-                  </li>
-                  <li class="parent"><a href="#"><i class="icon mdi mdi-accounts-list-alt"></i><span>Administrator</span></a>
-                    <ul class="sub-menu">
-                      <li><a href="maps-google.html">User Login</a>
-                      </li>
-                      <li><a href="maps-vector.html">Make Admin</a>
-                      </li>
-                    </ul>
-                  </li>
+                    </li>
                   @endif
                   
                 </ul>

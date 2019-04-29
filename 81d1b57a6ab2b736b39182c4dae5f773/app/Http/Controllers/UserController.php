@@ -24,7 +24,7 @@ class UserController extends Controller
     }
     public function getcreate()
     {
-        return view('register');
+        return view('user.create');
     }
 
     public function postcreate(Request $request)
