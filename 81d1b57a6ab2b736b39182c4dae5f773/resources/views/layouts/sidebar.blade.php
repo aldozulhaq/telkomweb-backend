@@ -58,7 +58,7 @@
                     </ul>
                     <li class="parent"><a href="#"><i class="icon mdi mdi-flag"></i><span>Kesiswaan</span></a>
                       <ul class="sub-menu">
-                        <li><a href="email-inbox.html">Osis</a>
+                        <li><a href="{{ url('/admin/osis')}}">Osis</a>
                         </li>
                         <li><a href="email-read.html">Ekstra Kulikuler</a>
                         </li>

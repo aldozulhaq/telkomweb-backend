@@ -55,6 +55,8 @@ route::get('/blank',function(){
         route::resource('/mm','MmController');
                 //tkj
         route::resource('/tkj','TkjController');
+        //osis
+        route::resource('/osis','OsisController');
                 //endprofil
                         //user
                         Route::get('user', ['as'=>'user','uses'=>'UserController@user']);
